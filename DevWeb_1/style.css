@@ -1,0 +1,154 @@
+/* Estilos Generales y Reseteo Básico */
+body {
+    margin: 0;
+    font-family: 'times new roman', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.main-header {
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-announcement-bar {
+    background-color: #FFF6DD;
+    height: 40px;
+    width: 100%;
+}
+
+.navbar-main {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links-left,
+.nav-links-right {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #F0C65C;
+}
+
+.nav-item i {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    z-index: 20;
+}
+
+.logo-circle {
+    background-color: #EEC250;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.shopping-bag-icon i {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+/* --- Tus estilos existentes para las otras secciones (ajustados ligeramente) --- */
+
+.hero {
+    margin-top: -0px;
+    position: relative;
+    z-index: 5;
+    height: 500px;
+    background-image: url('https://www.rawblend.com.au/wp-content/uploads/2020/10/Kemis-Basic-Green-Smoothie-1920x1080-1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+   
+    text-align: center;
+    
+}
+
+.overlay h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+     text-align: center;
+
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    background: #f3e4a0;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.curva {
+    background-color: #eef4ce;
+    padding: 60px 20px;
+    clip-path: ellipse(100% 100% at 50% 0%);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contenido h2 {
+    font-size: 24px;
+}
+
+.contenido a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
