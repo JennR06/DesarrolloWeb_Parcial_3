@@ -1,196 +1,207 @@
 body {
-    /* Existing styles, adjusted for centering */
-    font-family: Arial, Helvetica, sans-serif; /* Simplified font-family */
-    background-color: #D3F3D0; /* Fondo verde claro del área principal */
-    margin: 0; /* Elimina el margen predeterminado del body */
-    display: flex; /* Habilita Flexbox */
-    justify-content: center; /* Centra horizontalmente el contenido hijo */
-    align-items: center; /* Centra verticalmente el contenido hijo */
-    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
-    flex-direction: column; /* Apila elementos si hay más de uno (header, nav, form) */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f1fc;
+  color: #1e3a5f;
+  text-align: center;
 }
 
-/* CONTAINER (FORM BOX) STYLES */
-.container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px; /* Limita el ancho del formulario */
-    /* margin-top: 50px; -- No necesario si centramos con flexbox en body */
-    margin-bottom: 20px; /* Si hay un footer o más contenido debajo */
-    margin-top: auto; /* Si hay un footer o más contenido debajo */
+/* Fondo solo para la página de INICIO */
+body.inicio main {
+  position: relative;
+  background: url("https://assets.weforum.org/article/image/bMQpXZQiiZ3YRh-zyO4G89gEx1zMHWFVNXA5g-8PWPA.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
+  height: calc(100vh - 60px); /* Ajusta la altura para que ocupe toda la pantalla menos el header */
+  z-index: 1;
+  overflow: hidden;
 }
 
-/* FORM TITLE STYLES */
-h1 { /* Assuming this is for "Form Especialidades" title inside .container */
-    color: #4CAF50; /* Verde similar al de la imagen */
-    text-align: center; /* Alineación del texto dentro del contenedor */
-    margin-bottom: 30px;
-    font-size: 2.2em;
-    font-weight: normal;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más legible */
+body.inicio main::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(230, 241, 252, 0.7); /* color y opacidad del overlay */
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* FORM GROUP STYLES (LABEL + INPUT) */
-.form-group {
-    display: flex;
-    align-items: center; /* Alinea etiquetas e inputs verticalmente */
-    margin-bottom: 20px;
+body.inicio main > * {
+  position: relative;
+  z-index: 3;
 }
 
-.form-group label {
-    flex: 0 0 150px; /* Ancho fijo para las etiquetas */
-    margin-right: 15px;
-    color: #333;
-    font-size: 1.1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más legible */
+/* Header */
+header {
+  background: linear-gradient(to right, #b3d9f7, #a3ccf3);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group input[type="tel"],
-.form-group input[type="email"] {
-    flex-grow: 1; /* Permite que el input ocupe el espacio restante */
-    padding: 8px 12px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    outline: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #003366;
 }
 
-/* No hay un campo de fecha visible en la imagen de "Form Especialidades",
-   así que estas reglas para date input y calendario simulado podrían no ser necesarias
-   para *este* formulario específico, pero se mantienen si son generales para otros. */
-.form-group input[type="date"] {
-    padding-right: 30px;
-}
-.form-group .calendar-icon { /* Si usas un icono de calendario simulado */
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ccc;
-    background-color: #f0f0f0;
-    margin-left: -25px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8em;
-    color: #666;
+header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #2c5c88;
 }
 
-/* CHECKBOX STYLES (if applicable, not visible in Form Especialidades) */
-.form-group .checkbox {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ccc;
-    margin-left: 10px;
-    background-color: #fff;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-/* BUTTON STYLES */
-.btn-enviar {
-    display: block; /* Ocupa todo el ancho disponible si no se especifica */
-    width: 120px; /* Ancho fijo para el botón */
-    padding: 10px 0;
-    margin-top: 40px;
-    background-color: #fff;
-    color: #333;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más legible */
-    margin-left: auto; /* Centra el botón si es un elemento de bloque y no está en flexbox item */
-    margin-right: auto;
-}
-
-.btn-enviar:hover {
-    background-color: #e0e0e0;
-    border-color: #a0a0a0;
-}
-
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-@media (max-width: 600px) {
-    .form-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .form-group label {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    .form-group .checkbox,
-    .form-group .calendar-icon {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-}
-
-/* GLOBAL RESET AND NAVIGATION/HEADER STYLES (from previous context, adjust as needed for full page) */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: Arial, Helvetica, sans-serif; -- Ya definido en body para control global */
-}
-
-/* These headers/nav are from your previous context.
-   If the "Form Especialidades" page *only* shows the form as in the image,
-   you'd remove/hide these for that specific page.
-   If the form is part of a larger layout with nav/header, you'd need
-   a different parent container for the form to apply specific centering to it. */
-.cabeza { /* This is likely your <header> if you use that class */
-    background: #054112;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    width: 100%; /* Ensure it spans full width */
-}
-
+/* Navbar */
+nav,
 .nav-bar {
-    background: #075c19;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    /* top: 0; -- No necesario aquí si no es position: fixed */
-    font-size: 1.3rem;
-    color: white;
+  background-color: #b3d9f7;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.nav-bar ul { /* Add this if not present, to reset list styles */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Make nav items flex to center */
-    justify-content: center; /* Center nav items */
+nav ul,
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+nav ul li,
 .nav-bar ul li {
-    display: inline; /* Your original was inline, flex is better for spacing */
-    margin: 0 10px; /* Adjust margin for better spacing */
+  margin: 0;
+  padding: 0;
 }
 
-.nav-bar ul li a { /* Style for nav links */
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
+nav a,
+.nav-bar a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  display: block;
 }
 
+nav a:hover,
+.nav-bar a:hover {
+  background: #a3ccf3;
+  color: #005999;
+}
+
+/* Contenido principal */
+main {
+  padding: 30px 20px;
+}
+
+/* Cuadro de contenido como el de "Tu Bienestar" */
+.contenido {
+  max-width: 600px;
+  height: auto;
+  margin-top: 20px;
+  margin: 20px auto;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.953); /* semi-transparente */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Títulos */
+h2, h3 {
+  color: #004080;
+  
+}
+
+/* Formularios */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #ffffffcc;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a3ccf3;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  margin-bottom: 15px;
+}
+
+form button {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
 footer {
-    background: #054112;
-    text-align: center;
-    color: white;
-    padding: 36px;
-    margin-top: auto; /* Pushes footer to bottom in flex column */
-    width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #b3d9f7;
+  margin-top: 40px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #003366;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  nav ul,
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contenido,
+  form,
+  .container {
+    padding: 20px 10px;
+    margin-bottom: 30px;
+  }
+  header {
+    padding: 15px 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenido,
+  form,
+  .container {
+    padding: 15px 5px;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    font-size: 26px;
+  }
+  h2, h3 {
+    font-size: 1.2em;
+  }
 }

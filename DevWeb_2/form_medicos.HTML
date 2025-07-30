@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Médicos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="inicio">
+  <header class="cabeza">
+    <h1>🏥 Hospital Militar</h1>
+    <p>Programación II | 12 BTP - Informática</p>
+  </header>
+
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="form_pacientes.html">Pacientes</a></li>
+      <li><a href="form_citas.html">Citas</a></li>
+      <li><a href="form_especialidades.html">Especialidades</a></li>
+      <li><a href="form_historial_medico.html">Historial Médico</a></li>
+      <li><a href="form_medicos.html">Médicos</a></li>
+    </ul>
+  </nav>
+
+  <main class="formulario">
+    <h2>👨‍⚕️ Registro de Médicos</h2>
+    <form>
+      <div class="form-group">
+        <label for="idMedico">ID del Médico</label>
+        <input type="text" id="idMedico" required />
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" required />
+      </div>
+
+      <div class="form-group">
+        <label for="especialidad">Especialidad</label>
+        <input type="text" id="especialidad" required />
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" required />
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" required />
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p>📧 Contacto: <a href="mailto:Jennifer.tops2006@gmail.com">Jennifer.tops2006@gmail.com</a></p>
+  </footer>
+</body>
+</html>
