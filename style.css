@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+.contenido-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.texto-intro {
+  flex: 1;
+  min-width: 250px;
+}
+
+.imagen-intro img {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contenido-sobre {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.texto-sobre {
+  flex: 2;
+  min-width: 250px;
+}
+
+.imagen-sobre img {
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.imagen-sobre img:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar */
+nav,
+.nav-bar {
+  background-color: #b3d9f7;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav ul,
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav ul li,
+.nav-bar ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a,
+.nav-bar a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  display: block;
+}
+
+nav a:hover,
+.nav-bar a:hover {
+  background: #a3ccf3;
+  color: #005999;
+}
+/* Secciones */
+section {
+  padding: 50px 80px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Datos personales */
+.datos-personales p,
+.sobre-mi p {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+/* Habilidades */
+/* Agrupa las habilidades en una fila horizontal */
+.cards-horizontales {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.card {
+  background-color: #ffe8f1;
+  border: 1px solid #ffc3dc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #c9184a;
+}
+
+.card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Reseñas estilo caricatura */
+.testimonios {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.testimonios h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards-horizontales {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: nowrap; /* No permite que bajen a otra línea */
+  overflow-x: auto;  /* Permite scroll lateral en móviles */
+  padding-bottom: 10px;
+}
+
+.card {
+  border: 1.5px solid #ffc107;
+  padding: 18px 15px;
+  width: 260px;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border-radius: 16px;
+  background-color: #fffbe9;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0; /* No se reduce el ancho en scroll */
+  margin-bottom: 0;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(255,193,7,0.18);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 2px solid #ffe082;
+  background: #fff;
+}
+
+.card p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #b8860b;
+}
+
+.card span {
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+
+/* Opcional: mejora el scroll en móviles */
+.cards-horizontales::-webkit-scrollbar {
+  height: 8px;
+}
+.cards-horizontales::-webkit-scrollbar-thumb {
+  background: #ffe082;
+  border-radius: 4px;
+}
+
+/* Contacto */
+.contacto {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.formulario {
+  flex: 1;
+  min-width: 300px;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formulario textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.formulario button {
+  margin-top: 20px;
+  background-color: #FFD700;
+  color: black;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #ffcc00;
+}
+
+/* Info contacto */
+.info-contacto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.info-contacto h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.info-contacto a {
+  color: #000;
+  text-decoration: none;
+}
+
+.redes-sociales i {
+  font-size: 24px;
+  margin: 10px 10px 0 0;
+  color: #333;
+}
+
+.redes-sociales a:hover i {
+  color: #ffcc00;
+}
+
+.copyright,
+.diseno {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contacto {
+    flex-direction: column;
+  }
+}
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 5px;
+    border-radius: 0 0 12px 12px;
+  }
+  nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px 0;
+  }
+    .reseñas {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .habilidades {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+  /* ...otras reglas... */
+  .reseñas {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
