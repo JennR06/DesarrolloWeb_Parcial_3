@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Militar</title>
+  <link rel="stylesheet" href="styles4.css" />
+</head>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>Hospital Militar</h1>
+        <p>Programación II | 12 BTP - Informática</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li class="dropdown">
+          <a href="servicios_medicos.html">Servicios médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Consulta médica</a></li>
+            <li><a href="#">Laboratorio</a></li>
+            <li><a href="#">Farmacia</a></li>
+            <li><a href="#">Rayos X</a></li>
+            <li><a href="#">Ultrasonido</a></li>
+            <li><a href="#">Fisioterapia</a></li>
+            <li><a href="#">Psicología</a></li>
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="nuestros_medicos.html">Nuestros médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dr. Maynor López</a></li>
+            <li><a href="#">Dra. Ana Pérez</a></li>
+            <li><a href="#">Dr. Juan García</a></li>
+            <li><a href="#">Dra. María López</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="para_pacientes.html">Para pacientes</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Citas médicas</a></li>
+            <li><a href="#">Resultados de laboratorio</a></li>
+            <li><a href="#">Recetas médicas</a></li>
+            <li><a href="#">Información de seguros</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Médicos</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Historial Médico</a></li>
+            <li><a href="#">Especialidades</a></li>
+            <li><a href="#">Citas</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="informacion.html">Información</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Historia del hospital</a></li>
+            <li><a href="#">Misión y visión</a></li>
+            <li><a href="#">Valores</a></li>
+            <li><a href="#">Ubicación</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Hero Section -->
+  <section class="hero-pacientes">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h2>Servicios Para Nuestros Pacientes</h2>
+      <p>Accede a tus servicios médicos, resultados, recetas y más, de forma rápida y segura.</p>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="cards-servicios">
+      <article class="card service-item">
+        <span class="icon-servicio">🩺</span>
+        <h3>Consulta Médica</h3>
+        <p>Solicita tu cita médica con nuestros especialistas y recibe atención personalizada.</p>
+        <button class="btn-consultar" data-form="form-consulta">Consultar</button>
+      </article>
+      <article class="card service-item">
+        <span class="icon-servicio">🧪</span>
+        <h3>Resultados de Laboratorio</h3>
+        <p>Consulta y descarga los resultados de tus análisis clínicos en línea.</p>
+        <button class="btn-consultar" data-form="form-lab">Consultar</button>
+      </article>
+      <article class="card service-item">
+        <span class="icon-servicio">💊</span>
+        <h3>Recetas Médicas</h3>
+        <p>Solicita la renovación de tus recetas y consulta medicamentos disponibles.</p>
+        <button class="btn-consultar" data-form="form-receta">Consultar</button>
+      </article>
+      <article class="card service-item">
+        <span class="icon-servicio">🛡️</span>
+        <h3>Información de Seguros</h3>
+        <p>Verifica los seguros aceptados y gestiona tus coberturas médicas.</p>
+        <button class="btn-consultar" data-form="form-seguro">Consultar</button>
+      </article>
+    </section>
+
+    <!-- Modal Formulario -->
+    <div id="formulario-servicio" class="modal-form">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <!-- Formulario Consulta Médica -->
+        <form id="form-consulta" class="form-modal" style="display:none">
+          <h3>Solicitud de Consulta Médica</h3>
+          <label for="nombre-consulta">Nombre completo:</label>
+          <input type="text" id="nombre-consulta" name="nombre" required>
+          <label for="email-consulta">Correo electrónico:</label>
+          <input type="email" id="email-consulta" name="email" required>
+          <label for="fecha-consulta">Fecha de cita:</label>
+          <input type="date" id="fecha-consulta" name="fecha" required>
+          <label for="especialidad-consulta">Especialidad:</label>
+          <select id="especialidad-consulta" name="especialidad" required>
+            <option value="">Seleccione una especialidad</option>
+            <option value="Medicina General">Medicina General</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Ginecología">Ginecología</option>
+            <option value="Neurología">Neurología</option>
+          </select>
+          <label for="motivo-consulta">Motivo de consulta:</label>
+          <textarea id="motivo-consulta" name="motivo" rows="3" required></textarea>
+          <button type="submit">Solicitar Cita</button>
+        </form>
+        <!-- Formulario Resultados de Laboratorio -->
+        <form id="form-lab" class="form-modal" style="display:none">
+          <h3>Consulta de Resultados de Laboratorio</h3>
+          <label for="nombre-lab">Nombre completo:</label>
+          <input type="text" id="nombre-lab" name="nombre" required>
+          <label for="codigo-lab">Código de paciente:</label>
+          <input type="text" id="codigo-lab" name="codigo" required>
+          <label for="email-lab">Correo electrónico:</label>
+          <input type="email" id="email-lab" name="email" required>
+          <button type="submit">Consultar Resultados</button>
+        </form>
+        <!-- Formulario Recetas Médicas -->
+        <form id="form-receta" class="form-modal" style="display:none">
+          <h3>Solicitud de Receta Médica</h3>
+          <label for="nombre-receta">Nombre completo:</label>
+          <input type="text" id="nombre-receta" name="nombre" required>
+          <label for="email-receta">Correo electrónico:</label>
+          <input type="email" id="email-receta" name="email" required>
+          <label for="medicamento-receta">Medicamento:</label>
+          <input type="text" id="medicamento-receta" name="medicamento" required>
+          <label for="dosis-receta">Dosis:</label>
+          <input type="text" id="dosis-receta" name="dosis" required>
+          <button type="submit">Solicitar Receta</button>
+        </form>
+        <!-- Formulario Información de Seguros -->
+        <form id="form-seguro" class="form-modal" style="display:none">
+          <h3>Consulta de Información de Seguros</h3>
+          <label for="nombre-seguro">Nombre completo:</label>
+          <input type="text" id="nombre-seguro" name="nombre" required>
+          <label for="email-seguro">Correo electrónico:</label>
+          <input type="email" id="email-seguro" name="email" required>
+          <label for="seguro">Tipo de seguro:</label>
+          <input type="text" id="seguro" name="seguro" required>
+          <button type="submit">Consultar Seguro</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script>
+  // Mostrar formulario correspondiente
+  document.querySelectorAll('.btn-consultar').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.querySelectorAll('.form-modal').forEach(f => f.style.display = 'none');
+      const formId = this.getAttribute('data-form');
+      document.getElementById('formulario-servicio').classList.add('active');
+      document.getElementById(formId).style.display = 'block';
+    });
+  });
+
+  // Cerrar modal
+  document.querySelector('.close-btn').onclick = function() {
+    document.getElementById('formulario-servicio').classList.remove('active');
+    document.querySelectorAll('.form-modal').forEach(f => f.style.display = 'none');
+  };
+
+  // Cerrar modal al hacer click fuera del contenido
+  document.getElementById('formulario-servicio').onclick = function(e) {
+    if (e.target === this) {
+      this.classList.remove('active');
+      document.querySelectorAll('.form-modal').forEach(f => f.style.display = 'none');
+    }
+  };
+  </script>
+</body>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p>📧 Contacto: <a href="mailto:Jennifer.tops2006@gmail.com">Jennifer.tops2006@gmail.com</a></p>
+  </footer>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Militar</title>
+  <link rel="stylesheet" href="styles7.css" />
+</head>
+
+<body>
+ <!-- Encabezado -->
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>Hospital Militar</h1>
+        <p>Programación II | 12 BTP - Informática</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li class="dropdown">
+          <a href="servicios_medicos.html">Servicios médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Consulta médica</a></li>
+            <li><a href="#">Laboratorio</a></li>
+            <li><a href="#">Farmacia</a></li>
+            <li><a href="#">Rayos X</a></li>
+            <li><a href="#">Ultrasonido</a></li>
+            <li><a href="#">Fisioterapia</a></li>
+            <li><a href="#">Psicología</a></li>
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="nuestros_medicos.html">Nuestros médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dr. Maynor López</a></li>
+            <li><a href="#">Dra. Ana Pérez</a></li>
+            <li><a href="#">Dr. Juan García</a></li>
+            <li><a href="#">Dra. María López</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="para_pacientes.html">Para pacientes</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Citas médicas</a></li>
+            <li><a href="#">Resultados de laboratorio</a></li>
+            <li><a href="#">Recetas médicas</a></li>
+            <li><a href="#">Información de seguros</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Médicos</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Historial Médico</a></li>
+            <li><a href="#">Especialidades</a></li>
+            <li><a href="#">Citas</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="informacion.html">Información</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Historia del hospital</a></li>
+            <li><a href="#">Misión y visión</a></li>
+            <li><a href="#">Valores</a></li>
+            <li><a href="#">Ubicación</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <!-- Hero Contacto -->
+  <section class="hero-contacto">
+    <div class="hero-contacto-bg"></div>
+    <div class="hero-contacto-content">
+      <h2>¿Tienes dudas o necesitas ayuda?</h2>
+      <p>¡Contáctanos! Nuestro equipo está listo para atenderte y brindarte la mejor experiencia.</p>
+      <div class="contacto-info">
+        <div>
+          <span class="icono-contacto">📞</span>
+          <span>+504 2222-0000</span>
+        </div>
+        <div>
+          <span class="icono-contacto">✉️</span>
+          <span>info@hospitalmilitar.hn</span>
+        </div>
+        <div>
+          <span class="icono-contacto">📍</span>
+          <span>San Pedro Sula, Cortés, Honduras</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="contacto-form-section">
+      <div class="form-card">
+        <h2>Formulario de Contacto</h2>
+        <p>Déjanos tu mensaje y te responderemos lo antes posible.</p>
+        <form action="#" method="post" class="formulario-contacto">
+          <div class="form-group">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+        </form>
+      </div>
+      <div class="contacto-extra">
+        <h3>Horario de Atención</h3>
+        <ul>
+          <li>Lunes a Viernes: 7:00 am - 11:00 pm</li>
+          <li>Sábados a Domingos: 8:00 am - 10:00 pm</li>
+        </ul>
+        <h3>Síguenos</h3>
+        <div class="redes-sociales">
+          <a href="#" title="Facebook" class="icono-red">🌐</a>
+          <a href="#" title="Instagram" class="icono-red">📸</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p>📧 Contacto: <a href="mailto:Jennifer.tops2006@gmail.com">Jennifer.tops2006@gmail.com</a></p>
+  </footer>
+</body>
+
+</html>

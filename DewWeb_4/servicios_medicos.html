@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios Médicos - Hospital Militar</title>
+  <link rel="stylesheet" href="styles5.css" />
+</head>
+
+<!-- Encabezado -->
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>Hospital Militar</h1>
+        <p>Programación II | 12 BTP - Informática</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li class="dropdown">
+          <a href="servicios_medicos.html">Servicios médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Consulta médica</a></li>
+            <li><a href="#">Laboratorio</a></li>
+            <li><a href="#">Farmacia</a></li>
+            <li><a href="#">Rayos X</a></li>
+            <li><a href="#">Ultrasonido</a></li>
+            <li><a href="#">Fisioterapia</a></li>
+            <li><a href="#">Psicología</a></li>
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="nuestros_medicos.html">Nuestros médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dr. Maynor López</a></li>
+            <li><a href="#">Dra. Ana Pérez</a></li>
+            <li><a href="#">Dr. Juan García</a></li>
+            <li><a href="#">Dra. María López</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="para_pacientes.html">Para pacientes</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Citas médicas</a></li>
+            <li><a href="#">Resultados de laboratorio</a></li>
+            <li><a href="#">Recetas médicas</a></li>
+            <li><a href="#">Información de seguros</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Médicos</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Historial Médico</a></li>
+            <li><a href="#">Especialidades</a></li>
+            <li><a href="#">Citas</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="informacion.html">Información</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Historia del hospital</a></li>
+            <li><a href="#">Misión y visión</a></li>
+            <li><a href="#">Valores</a></li>
+            <li><a href="#">Ubicación</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Parallax Hero -->
+  <section class="parallax-hero">
+    <div class="parallax-overlay">
+      <h2>Servicios Médicos de Excelencia</h2>
+      <p>Descubre nuestra amplia gama de servicios médicos, tecnología avanzada y atención personalizada para tu bienestar.</p>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+<main class="main-content">
+  <h2>Nuestros Servicios</h2>
+  <section class="services-grid">
+    <!-- Consulta Médica -->
+     
+    <article class="service-card">
+      <span class="service-icon">🩺</span>
+      <h3>Consulta Médica</h3>
+      <p>Atención personalizada por médicos especializados.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-consulta')">Solicitar cita</button>
+    </article>
+    <!-- Laboratorio -->
+    <article class="service-card">
+      <span class="service-icon">🧪</span>
+      <h3>Laboratorio</h3>
+      <p>Análisis clínicos y pruebas diagnósticas.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-lab')">Ver exámenes</button>
+    </article>
+    <!-- Farmacia -->
+    <article class="service-card">
+      <span class="service-icon">💊</span>
+      <h3>Farmacia</h3>
+      <p>Medicamentos seguros con receta.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-farmacia')">Solicitar medicamento</button>
+    </article>
+    <!-- Rayos X -->
+    <article class="service-card">
+      <span class="service-icon">🩻</span>
+      <h3>Rayos X</h3>
+      <p>Imágenes médicas para diagnóstico preciso.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-rayosx')">Solicitar estudio</button>
+    </article>
+    <!-- Ultrasonido -->
+    <article class="service-card">
+      <span class="service-icon">🖥️</span>
+      <h3>Ultrasonido</h3>
+      <p>Ecografías modernas y detalladas.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-ultrasonido')">Agendar ultrasonido</button>
+    </article>
+    <!-- Fisioterapia -->
+    <article class="service-card">
+      <span class="service-icon">🧘</span>
+      <h3>Fisioterapia</h3>
+      <p>Rehabilitación y recuperación física especializada.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-fisio')">Solicitar sesión</button>
+    </article>
+    <!-- Psicología -->
+    <article class="service-card">
+      <span class="service-icon">🧠</span>
+      <h3>Psicología</h3>
+      <p>Apoyo emocional y atención mental profesional.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-psico')">Agendar consulta</button>
+    </article>
+    <!-- Cardiología -->
+    <article class="service-card">
+      <span class="service-icon">🫀</span>
+      <h3>Cardiología</h3>
+      <p>Evaluación y tratamiento de enfermedades del corazón.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-cardio')">Solicitar evaluación</button>
+    </article>
+    <!-- Pediatría -->
+    <article class="service-card">
+      <span class="service-icon">🧸</span>
+      <h3>Pediatría</h3>
+      <p>Cuidado médico para niños y adolescentes.</p>
+      <button class="btn-servicio" onclick="mostrarFormulario('form-pedia')">Agendar pediatra</button>
+    </article>
+  </section>
+</main>
+
+<!-- Formularios modales fuera del grid para mejor overlay -->
+<div id="form-consulta" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitar Consulta Médica</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <textarea placeholder="Motivo de consulta" required></textarea>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-consulta')">Cerrar</button>
+  </form>
+</div>
+<div id="form-lab" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Consulta de Laboratorio</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="text" placeholder="Código de paciente" required>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-lab')">Cerrar</button>
+  </form>
+</div>
+<div id="form-farmacia" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Medicamento</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="text" placeholder="Medicamento solicitado" required>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-farmacia')">Cerrar</button>
+  </form>
+</div>
+<div id="form-rayosx" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Rayos X</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-rayosx')">Cerrar</button>
+  </form>
+</div>
+<div id="form-ultrasonido" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Ultrasonido</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-ultrasonido')">Cerrar</button>
+  </form>
+</div>
+<div id="form-fisio" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Fisioterapia</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <textarea placeholder="Área a tratar" required></textarea>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-fisio')">Cerrar</button>
+  </form>
+</div>
+<div id="form-psico" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Psicología</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <textarea placeholder="Motivo de consulta" required></textarea>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-psico')">Cerrar</button>
+  </form>
+</div>
+<div id="form-cardio" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Cardiología</h4>
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <textarea placeholder="Síntomas o motivo" required></textarea>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-cardio')">Cerrar</button>
+  </form>
+</div>
+<div id="form-pedia" class="form-servicio-modal">
+  <form class="form-servicio-popup">
+    <h4>Solicitud de Pediatría</h4>
+    <input type="text" placeholder="Nombre del paciente" required>
+    <input type="text" placeholder="Nombre del responsable" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <button type="submit" class="btn-servicio">Enviar</button>
+    <button type="button" class="btn-cerrar" onclick="cerrarFormulario('form-pedia')">Cerrar</button>
+  </form>
+</div>
+
+<script>
+function mostrarFormulario(id) {
+  document.querySelectorAll('.form-servicio-modal').forEach(f => f.style.display = 'none');
+  document.getElementById(id).style.display = 'flex';
+}
+function cerrarFormulario(id) {
+  document.getElementById(id).style.display = 'none';
+}
+// Cerrar modal al hacer click fuera del formulario
+document.querySelectorAll('.form-servicio-modal').forEach(modal => {
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+});
+// Envío de formularios
+document.querySelectorAll('.form-servicio-popup').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Formulario enviado correctamente.');
+    form.reset();
+    form.parentElement.style.display = 'none';
+  });
+});
+</script>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p>📧 Contacto: <a href="mailto:Jennifer.tops2006@gmail.com">Jennifer.tops2006@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

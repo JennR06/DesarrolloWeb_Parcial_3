@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directorio Médico | Hospital Militar</title>
+  <link rel="stylesheet" href="styles3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="header-content">
+      <div>
+        <h1>Hospital Militar</h1>
+        <p>Programación II | 12 BTP - Informática</p>
+      </div>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li class="dropdown">
+          <a href="servicios_medicos.html">Servicios médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Consulta médica</a></li>
+            <li><a href="#">Laboratorio</a></li>
+            <li><a href="#">Farmacia</a></li>
+            <li><a href="#">Rayos X</a></li>
+            <li><a href="#">Ultrasonido</a></li>
+            <li><a href="#">Fisioterapia</a></li>
+            <li><a href="#">Psicología</a></li>
+            <li><a href="#">Cardiología</a></li>
+            <li><a href="#">Pediatría</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="nuestros_medicos.html">Nuestros médicos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dr. Maynor López</a></li>
+            <li><a href="#">Dra. Ana Pérez</a></li>
+            <li><a href="#">Dr. Juan García</a></li>
+            <li><a href="#">Dra. María López</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="para_pacientes.html">Para pacientes</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Citas médicas</a></li>
+            <li><a href="#">Resultados de laboratorio</a></li>
+            <li><a href="#">Recetas médicas</a></li>
+            <li><a href="#">Información de seguros</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="sistema_de_gestiones.html">Sistema de gestiones</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Médicos</a></li>
+            <li><a href="#">Pacientes</a></li>
+            <li><a href="#">Historial Médico</a></li>
+            <li><a href="#">Especialidades</a></li>
+            <li><a href="#">Citas</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="informacion.html">Información</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Historia del hospital</a></li>
+            <li><a href="#">Misión y visión</a></li>
+            <li><a href="#">Valores</a></li>
+            <li><a href="#">Ubicación</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Fondo decorativo y grupo de médicos -->
+  <!-- ...existing code... -->
+<section class="hero-medicos">
+  <div class="bg-circulos"></div>
+  <div class="medicos-img-group">
+    <img src="docs.jpg" alt="Equipo Médico" class="img-docs" />
+  </div>
+  <div class="buscador-directorio">
+    <h2>Directorio <span class="azul">MÉDICO</span> <span class="rosa">en línea</span></h2>
+    <p>La red de Médicos Especialistas más extensa en la región a tu disposición.</p>
+    <form class="busqueda-form" onsubmit="return false;">
+      <input type="text" placeholder="Buscar médico, especialidad..." id="busqueda-medico" />
+      <button type="submit">BUSCAR MÉDICO</button>
+      <button type="button" class="ver-todos" onclick="mostrarPerfiles()">VER TODOS</button>
+    </form>
+  </div>
+</section>
+
+<section class="perfiles-medicos" id="perfiles-medicos" style="display:none;">
+  <h2>Perfiles de Nuestros Médicos</h2>
+  <div class="perfiles-grid">
+    <div class="perfil-card">
+      <img src="https://medicinasa.com.br/wp-content/uploads/2023/03/medico-hospital-esteto-2-850x560.jpg" alt="Dr. Miguel Carrero" class="perfil-foto" />
+      <h3>Dr. Miguel Carrero</h3>
+      <p>Cardiólogo</p>
+      <p>Especialista en enfermedades cardiovasculares con más de 15 años de experiencia.</p>
+    </div>
+    <div class="perfil-card">
+      <img src="https://www.brooklinecollege.edu/wp-content/uploads/2023/09/shutterstock_2279543395-scaled.jpg" alt="Dra. Ana Pérez" class="perfil-foto" />
+      <h3>Dra. Ana Pérez</h3>
+      <p>Pediatra</p>
+      <p>Atención integral a niños y adolescentes, enfocada en el desarrollo saludable.</p>
+    </div>
+    <div class="perfil-card">
+      <img src="https://img2.rtve.es/i/?w=1600&i=1653396369308.jpg" alt="Dr. Juan García" class="perfil-foto" />
+      <h3>Dr. Juan García</h3>
+      <p>Neurólogo</p>
+      <p>Diagnóstico y tratamiento de trastornos del sistema nervioso.</p>
+    </div>
+    <div class="perfil-card">
+      <img src="https://cdn-cjlhn.nitrocdn.com/MDbIaQnHgvYrWdlkNlAApgMXaoLyMZQw/assets/images/optimized/rev-81c0126/www.brooklinecollege.edu/wp-content/uploads/2023/01/shutterstock_317578751-scaled.jpg" alt="Dra. María López" class="perfil-foto" />
+      <h3>Dra. María López</h3>
+      <p>Ginecóloga</p>
+      <p>Especialista en salud femenina y control prenatal.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function mostrarPerfiles() {
+  document.getElementById('perfiles-medicos').style.display = 'block';
+  document.getElementById('perfiles-medicos').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+  <!-- Accesos rápidos -->
+  <section class="accesos-rapidos">
+    <div class="acceso-card cotizaciones">
+      <span class="icon">💼</span>
+      <h3>Cotizaciones</h3>
+      <p>Solicita tu ingreso, baja estimada y presupuesto hospitalario.</p>
+    </div>
+    <div class="acceso-card preadmision">
+      <span class="icon">📝</span>
+      <h3>Pre-admisión</h3>
+      <p>Regístrate y agiliza tu atención en la clínica o área de hospitalización.</p>
+    </div>
+    <div class="acceso-card mihospital">
+      <span class="icon">📱</span>
+      <h3>MiHospital</h3>
+      <p>Accede a tu información médica, facturas y resultados en línea.</p>
+    </div>
+    <div class="acceso-card correo">
+      <span class="icon">✉️</span>
+      <h3>Correo en Línea</h3>
+      <p>Solicita el pago de tus servicios médicos desde tu correo.</p>
+    </div>
+  </section>
+
+  
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Repaso HTML CSS. Todos los derechos reservados.</p>
+    <p>LMH - Programación</p>
+    <p>📧 Contacto: <a href="mailto:Jennifer.tops2006@gmail.com">Jennifer.tops2006@gmail.com</a></p>
+  </footer>
+</body>
+</html>
